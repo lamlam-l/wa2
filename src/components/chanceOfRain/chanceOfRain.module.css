@@ -1,0 +1,134 @@
+.chanceOfRain {
+    width: 300px;
+    position: relative;
+    height: 240px;
+}
+
+.yLable {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.yLable::after {
+    content: '';
+    flex: 1;
+    border-top: 1px dashed #595959;
+}
+
+.yLable:nth-child(1) {
+    top: 10%;
+}
+
+.yLable:nth-child(2) {
+    top: 35%;
+}
+
+.yLable:nth-child(3) {
+    top: 65%;
+}
+
+.xBar {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    font-size: 14px;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.bar {
+    width: 6px;
+    background-color: #232325;
+    position: relative;
+    border-radius: 3px;
+}
+
+.bar::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #BAD4EB;
+    border-radius: 3px;
+}
+
+.xBar:nth-child(4) {
+    left: 12%;
+}
+
+.xBar:nth-child(4) .bar {
+    height: 53%;
+}
+
+.xBar:nth-child(4) .bar::after {
+    height: 80%;
+}
+
+.xBar:nth-child(5) {
+    left: 27%;
+}
+
+.xBar:nth-child(5) .bar {
+    height: 80%;
+}
+
+.xBar:nth-child(5) .bar::after {
+    height: 60%;
+}
+
+.xBar:nth-child(6) {
+    left: 42%;
+}
+
+.xBar:nth-child(6) .bar {
+    height: 60%;
+}
+
+.xBar:nth-child(6) .bar::after {
+    height: 40%;
+}
+
+.xBar:nth-child(7) {
+    left: 57%;
+}
+
+.xBar:nth-child(7) .bar {
+    height: 40%;
+}
+
+.xBar:nth-child(7) .bar::after {
+    height: 20%;
+}
+
+.xBar:nth-child(8) {
+    left: 72%;
+}
+
+.xBar:nth-child(8) .bar {
+    height: 20%;
+}
+
+.xBar:nth-child(8) .bar::after {
+    height: 10%;
+}
+
+.xBar:nth-child(9) {
+    left: 87%;
+}
+
+.xBar:nth-child(9) .bar {
+    height: 20%;
+}
+
+.xBar:nth-child(9) .bar::after {
+    height: 20%;
+}
+

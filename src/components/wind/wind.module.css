@@ -1,0 +1,31 @@
+.wind {
+    width: 300px;
+    background-color: #1B1B1D;
+    padding: 16px;
+    border-radius: 16px;
+    height: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.windChart {
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.speed {
+    font-size: 14px;
+}
+
+.speedValue {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.time {
+    font-size: 14px;
+}

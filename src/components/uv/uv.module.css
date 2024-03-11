@@ -1,0 +1,25 @@
+.uv {
+    width: 300px;
+    background-color: #1B1B1D;
+    padding: 16px;
+    border-radius: 16px;
+    height: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.UvGraph {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.text {
+    text-align: center;
+}
+
+.value {
+    font-size: 20px;
+    font-weight: bold;
+}

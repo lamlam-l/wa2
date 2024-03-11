@@ -1,0 +1,36 @@
+.cityList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.city {
+    background: #1B1B1D;
+    padding: 16px 24px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.country {
+    font-size: 14px;
+    color: #777777;
+}
+
+.name {
+    font-size: 20px;
+}
+
+.weather {
+    font-size: 14px;
+}
+
+.weatherImage {
+    width: 70px;
+}

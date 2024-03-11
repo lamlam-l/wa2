@@ -47,7 +47,7 @@
     background: #1E1E1E;
     outline: 0 !important;
     border: 0 !important;
-    padding: 16px 24px 16px 48px;
+    padding: 12px 24px 12px 48px;
     border-radius: 10px;
     color: white;
 }
@@ -99,3 +99,30 @@
     border-radius: 9999px;
 }
 
+.drawers {
+    padding: 12px;
+    background: #1E1E1E;
+    border: 0 !important;
+    outline: 0 !important;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: white;
+    font-size: 18px;
+    aspect-ratio: 1 / 1;
+    display: none;
+}
+
+.drawers:active {
+    background: #2E2E2E;
+}
+
+@media (width <= 860px) {
+    .navButton, .location, .themeSwitcherWrapper {
+        display: none;
+    }
+
+    .drawers {
+        display: block;
+    }
+}

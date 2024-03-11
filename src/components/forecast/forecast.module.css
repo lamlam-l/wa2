@@ -1,0 +1,142 @@
+.forecast {
+    display: flex;
+    gap: 40px;
+    overflow: auto;
+    padding-bottom: 4px;
+}
+
+.forecastItem {
+    background-color: #1B1B1D;
+    border-radius: 24px;
+    overflow: hidden;
+    min-width: 82px;
+}
+
+.forecastItem--active {
+    color: black;
+    width: 270px;
+    min-width: 270px;
+}
+
+.forecastItem:not(.forecastItem--active) {
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.forecastItem:not(.forecastItem--active):hover {
+    background-color: #2c2c2c;
+}
+
+.header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecastItem:not(.forecastItem--active) .header {
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+
+.forecastItem--active .header {
+    background-color: #AECADF;
+}
+
+.content {
+    background-color: #BBD7EC;
+    padding: 16px;
+}
+
+.dayInWeek {
+    font-weight: bold;
+    text-align: center;
+}
+
+.mainData {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.weatherIconWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.temperature {
+    font-size: 40px;
+    font-weight: 600;
+    color: #212121;
+}
+
+.subData {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.dataItem {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: 6px;
+}
+
+.dataTitle {
+    color: #4F5658;
+}
+
+.dataValue {
+    font-weight: 500;
+}
+
+.weatherIcon {
+    width: 80px;
+}
+
+.mainTemperature {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainWeatherIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.mainTemperatureText {
+    margin-top: 42px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.forecast::-webkit-scrollbar {
+    height: 8px;
+}
+
+.forecast::-webkit-scrollbar-track {
+}
+
+.forecast::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 9999px;
+    transition: background 0.2s ease-in-out;
+}
+
+.forecast::-webkit-scrollbar-thumb:active {
+    background: red;
+}
+
+.forecast:hover::-webkit-scrollbar-thumb {
+    background: #343434;
+}
+
+/* Handle on hover */
+.forecast::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

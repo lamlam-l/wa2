@@ -12,6 +12,9 @@ export default function Header() {
     }
 
     return <header className={styles.header}>
+        <button className={styles.drawers}>
+            <i className="fa-solid fa-bars"></i>
+        </button>
         <button className={styles.navButton}>
             <img src={fourSquareIcon} alt=""/>
         </button>
@@ -25,7 +28,7 @@ export default function Header() {
         <div className={styles.searchWrapper}>
             <div className={styles.inputContainer}>
                 <i className="fa-solid fa-magnifying-glass"></i>
-                <input className={styles.search} type="text" placeholder="Search City"/>
+                <input className={styles.search} type="text" placeholder="Search More"/>
             </div>
         </div>
         <div className={styles.themeSwitcherWrapper}>
@@ -37,7 +40,9 @@ export default function Header() {
             </div>
         </div>
         <div className={styles.avatarWrapper}>
-            <img className={styles.avatar} src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/>
+            <img className={styles.avatar}
+                 src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                 alt=""/>
         </div>
     </header>
 }

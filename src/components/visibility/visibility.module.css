@@ -1,0 +1,36 @@
+.visibility {
+    width: 300px;
+    background-color: #1B1B1D;
+    padding: 16px;
+    border-radius: 16px;
+    height: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.visibilityImage {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.value {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.instruction {
+    font-size: 14px;
+    color: #818085;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
