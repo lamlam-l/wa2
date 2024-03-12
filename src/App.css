@@ -6,7 +6,222 @@ body {
 
 .main {
     padding: 16px;
-    max-width: 1400px;
+    max-width: 1280px;
     margin: auto;
 }
 
+.forecastHeader {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.switchButton {
+    font-size: 12px;
+    background: #1E1E1E;
+    padding: 8px 12px;
+    border-radius: 9999px;
+    display: flex;
+    gap: 32px;
+    position: relative;
+    cursor: pointer;
+}
+
+.switchButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc(50% - 8px);
+    background: #BBD7EC;
+    border-radius: 9999px;
+    left: 0;
+    transition: all 0.2s ease;
+}
+
+.switchButton--airQuality::before {
+    left: calc(50%);
+    width: calc(50%);
+}
+
+.switchButtonText {
+    z-index: 1;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.switchButtonText:first-child {
+    color: #1E1E1E;
+}
+
+.switchButton--airQuality .switchButtonText:first-child {
+    color: white;
+}
+
+.switchButton--airQuality .switchButtonText:last-child {
+    color: #1E1E1E;
+}
+
+.content {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 300px 300px 300px 300px;
+    align-items: center;
+    margin-top: 24px;
+    grid-template-areas:
+            "forecastHeader forecastHeader forecastHeader chanceOfRainHeader"
+            "forecast forecast forecast chanceOfRain"
+            "overview overview overview cityHeader"
+            "wind uv more city"
+            "humidity visibility more city";
+}
+
+.forecastHeader {
+    grid-area: forecastHeader;
+}
+
+.chanceOfRainHeader {
+    grid-area: chanceOfRainHeader;
+}
+
+.forecast {
+    grid-area: forecast;
+}
+
+.chanceOfRain {
+    grid-area: chanceOfRain;
+}
+
+.overview {
+    grid-area: overview;
+}
+
+.cityHeader {
+    grid-area: cityHeader;
+}
+
+.wind {
+    grid-area: wind;
+}
+
+.uv {
+    grid-area: uv;
+}
+
+.humidity {
+    grid-area: humidity;
+}
+
+.visibility {
+    grid-area: visibility;
+}
+
+.more {
+    grid-area: more;
+    align-self: stretch;
+}
+
+.city {
+    height: 520px;
+    overflow: auto;
+    align-self: start;
+    grid-area: city;
+}
+
+.city::-webkit-scrollbar {
+    display: none;
+}
+
+@media (width <= 1280px) {
+    .content {
+        grid-template-columns: 300px 300px 300px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-areas:
+            "forecastHeader forecastHeader forecastHeader"
+            "forecast forecast forecast"
+            "overview overview cityHeader"
+            "wind chanceOfRain city"
+            "uv more city"
+            "humidity more city"
+            "visibility more city";
+    }
+
+    .chanceOfRainHeader {
+        display: none;
+    }
+
+    .city {
+        height: 1020px;
+    }
+}
+
+@media (width <= 1000px) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "forecastHeader forecastHeader"
+            "forecast forecast"
+            "overview overview"
+            "wind more"
+            "chanceOfRain more"
+            "uv city"
+            "humidity city"
+            "visibility city";
+    }
+
+    .cityHeader {
+        display: none;
+    }
+
+    .city {
+        height: 766px;
+    }
+}
+
+@media (width <= 680px) {
+    .content {
+        grid-template-columns: 300px;
+        grid-template-areas:
+            "forecastHeader"
+            "forecast"
+            "chanceOfRainHeader"
+            "chanceOfRain"
+            "overview"
+            "wind"
+            "uv"
+            "humidity"
+            "visibility"
+            "more"
+            "cityHeader"
+            "city";
+    }
+
+    .forecast {
+        margin-left: 16px;
+    }
+
+    .chanceOfRainHeader {
+        display: block;
+        margin-top: 16px;
+    }
+
+    .overview {
+        margin-top: 16px;
+    }
+
+    .cityHeader {
+        display: block;
+        margin-top: 16px;
+    }
+
+    .more {
+        height: 500px;
+    }
+
+    .city {
+        height: unset;
+    }
+}

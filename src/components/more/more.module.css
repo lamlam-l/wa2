@@ -1,6 +1,6 @@
 .more {
-    width: 400px;
-    height: 520px;
+    height: 100%;
+    border-radius: 16px;
     background: url("https://burst.shopifycdn.com/photos/chicago-city-lights-at-night.jpg?width=1000&format=pjpg&exif=0&iptc=0") no-repeat;
     background-size: cover;
     position: relative;
